@@ -329,6 +329,7 @@ footer {
     font-size: 1rem;
   }
 
+  #hero-title,
   #hero-title a:visited #hero-title a:active {
     color: #fff;
   }
