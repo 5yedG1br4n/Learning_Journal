@@ -1,0 +1,389 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  color: #0e0e0e;
+  background: #fff;
+  user-select: none;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* Home Page */
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.125em 1.375em;
+}
+
+.nav-inner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#site-logo {
+  width: 1.45rem;
+}
+
+#site-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.407px;
+  margin-left: 0.2em;
+}
+
+.home,
+.about-me {
+  color: #090909;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.home a,
+.about-me a {
+  text-decoration: none;
+}
+
+.home a:visited,
+.about-me a:visited {
+  color: #090909;
+}
+
+.home a:hover,
+.about-me a:hover {
+  border-bottom: 2px solid #090909;
+}
+
+.about-me {
+  margin-left: 4em;
+}
+
+/* Main */
+
+main {
+  grid-area: main;
+}
+
+#hero-section {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.31) 0%,
+      rgba(0, 0, 0, 0.31) 100%
+    ),
+    url("assets/hero_image.png"),
+    lightgray 0px -255.741px / 100% 188.396% no-repeat;
+  background-size: cover;
+  background-position-y: 85%;
+  color: #fff;
+  text-shadow: 0 0 0.15rem black;
+  display: grid;
+  grid-template-columns: 1.25em 1fr 1.25em;
+  grid-template-areas:
+    ". date ."
+    ". hero-title ."
+    ". hero-content .";
+  justify-content: center;
+}
+
+#hero-date {
+  grid-area: date;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-top: 7.25em;
+}
+
+#hero-title {
+  grid-area: hero-title;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 108.2%; /* 34.624px */
+  letter-spacing: -0.96px;
+  margin: 0.25em 0;
+}
+
+#hero-title a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#hero-title a:visited {
+  color: #fff;
+}
+
+#hero-content {
+  grid-area: hero-content;
+  font-weight: 400;
+  margin: 0.5em 0 1.56em;
+}
+
+/* Blog Posts */
+
+#blog-posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2.875em 1.625em;
+  padding: 3.312em 3.312em 0 3.312em;
+}
+
+.blog-post {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "post-image"
+    "post-date"
+    "post-title"
+    "post-content";
+}
+
+.hidden {
+  display: none;
+}
+
+.blog-post-img {
+  grid-area: post-image;
+  width: 100%;
+  height: 14.5rem;
+  object-fit: cover;
+  object-position: 50%;
+  margin-bottom: 0.88em;
+  border-radius: 0.188em;
+}
+
+.blog-date {
+  grid-area: post-date;
+  color: #000;
+  font-size: 0.885rem;
+}
+
+.blog-title {
+  grid-area: post-title;
+  color: #141414;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 108.2%; /* 25.968px */
+  margin: 0.375em 0;
+}
+
+.blog-content {
+  grid-area: post-content;
+  color: #505050;
+  font-size: 1rem;
+  line-height: 125%; /* 20px */
+}
+
+#view-more {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  text-decoration-line: underline;
+  margin: 1.68em auto 2.69em;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  grid-area: footer;
+  background: #202020;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    ". footer-title ."
+    ". copyright .";
+}
+
+#footer-heading {
+  grid-area: footer-title;
+  color: #ececec;
+  font-size: 1.25vw;
+  font-weight: 700;
+  line-height: 108.2%; /* 12.984px */
+  letter-spacing: -0.36px;
+  margin: 3.3em 0 0.5em;
+  justify-self: center;
+}
+
+#copyrights {
+  grid-area: copyright;
+  color: #d7d7d7;
+  font-size: 1.25vw;
+  line-height: 125%; /* 15px */
+  margin-bottom: 3.3em;
+  justify-self: center;
+}
+
+/* About Me */
+
+#about-me-hero,
+#post-hero-section {
+  display: grid;
+  padding: 1.375em 3.312em;
+}
+
+#about-me-img {
+  width: 11.375rem;
+  border-radius: 50%;
+}
+
+#about-me-title,
+#about-me-para {
+  color: #151515;
+}
+
+#about-me-title {
+  font-size: 2.18rem;
+  font-weight: 700;
+  line-height: 108.2%; /* 37.695px */
+  letter-spacing: -1.045px;
+  margin: 0.77em 0 0.45em;
+}
+
+.article-title {
+  font-weight: 700;
+}
+
+.article-para {
+  margin: 1.5em 0 1em;
+}
+
+#recent-posts {
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+/* Post html */
+
+#post-hero-date {
+  font-size: 0.75rem;
+}
+
+#post-hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 108.2%; /* 34.624px */
+  letter-spacing: -0.96px;
+  margin: 0.5em 0 0.46em;
+}
+
+#post-hero-date,
+#post-hero-title,
+#post-hero-content {
+  color: #151515;
+}
+
+#post-hero-content {
+  margin-bottom: 2.187em;
+}
+
+#post-hero-img {
+  width: 100%;
+  height: 14.5rem;
+  object-fit: cover;
+  object-position: 50% 75%;
+}
+
+#post-hero-wrapper {
+  margin-bottom: 2.187em;
+}
+
+/* Media queries */
+
+@media (min-width: 415px) {
+  /* Media-Home */
+
+  header {
+    padding: 1.88em 3.312em;
+  }
+
+  #site-logo {
+    width: 2.14rem;
+  }
+
+  #site-title {
+    font-size: 1.25rem;
+    margin-left: 0.4em;
+  }
+
+  .home,
+  .about-me {
+    font-size: 1rem;
+  }
+
+  /* Media-Hero */
+
+  #hero-section {
+    grid-template-columns: 3.312em 1fr 3.312em;
+    background-position-y: 75%;
+  }
+
+  #hero-date {
+    font-size: 1.5vw;
+    margin-top: 17.93em;
+  }
+
+  #hero-title {
+    font-size: 3.75vw;
+  }
+
+  #hero-content {
+    font-size: 1.5vw;
+    max-width: 38.43rem;
+    margin-bottom: 3.75em;
+  }
+
+  .hidden {
+    display: grid;
+  }
+
+  /* Media About me */
+
+  #about-me-hero-wrapper {
+    display: grid;
+    grid-template: 1.25em auto auto 2em / auto 2.06em auto;
+    grid-template-areas:
+      "about-me-image . ."
+      "about-me-image . about-me-title"
+      "about-me-image . about-me-para"
+      "about-me-image . .";
+    margin-bottom: 4.06em;
+  }
+
+  #about-me-img {
+    grid-area: about-me-image;
+  }
+
+  #about-me-title {
+    grid-area: about-me-title;
+    margin-bottom: 0;
+  }
+
+  #about-me-para {
+    grid-area: about-me-para;
+    margin-top: 0;
+  }
+
+  /* Media Posts */
+
+  #post-hero-img {
+    height: 30.5rem;
+  }
+}
