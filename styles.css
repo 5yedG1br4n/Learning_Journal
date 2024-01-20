@@ -122,7 +122,7 @@ main {
   cursor: pointer;
 }
 
-#hero-title a:visited {
+#hero-title a:visited #hero-title a:active {
   color: #fff;
 }
 
