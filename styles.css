@@ -123,7 +123,8 @@ main {
   cursor: pointer;
 }
 
-#hero-title a:visited #hero-title a:active {
+#hero-title a:visited,
+#hero-title a:active {
   color: #fff;
 }
 
@@ -330,7 +331,8 @@ footer {
   }
 
   #hero-title,
-  #hero-title a:visited #hero-title a:active {
+  #hero-title a:visited,
+  #hero-title a:active {
     color: #fff;
   }
 
