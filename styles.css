@@ -140,7 +140,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2.875em 1.625em;
-  padding: 3.312em 3.312em 0 3.312em;
+  padding: 3.312em 1.375em 0 1.375em;
 }
 
 .blog-post {
@@ -356,6 +356,10 @@ footer {
     font-size: 1.5vw;
     max-width: 38.43rem;
     margin-bottom: 3.75em;
+  }
+
+  #blog-posts-wrapper {
+    padding: 3.312em 3.312em 0 3.312em;
   }
 
   .hidden {
